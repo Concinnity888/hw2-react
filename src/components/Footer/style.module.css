@@ -1,0 +1,35 @@
+.Footer {
+  background-color: #F0F2F3;
+}
+
+.Footer__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: calc(100% - 200px);
+  min-width: 824px;
+  min-height: 32px;
+  margin: 0 auto;
+}
+
+.Footer__copyright {
+  margin: 0;
+  padding: 0;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: 0.06px;
+  color: #7F8285;
+}
+
+@media (max-width: 1023px) {
+  .Footer__wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    min-width: 320px;
+    padding: 12px 16px;
+    box-sizing: border-box;
+  }
+}

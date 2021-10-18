@@ -1,0 +1,28 @@
+.FooterNav__list {
+  display: flex;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.FooterNav__link {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 16px;
+  text-decoration: none;
+  letter-spacing: 0.06px;
+  color: #7F8285;
+  transition: all 0.35s ease;
+}
+
+.FooterNav__link:hover {
+  color: #E00000;
+}
+
+@media (max-width: 1023px) {
+  .FooterNav {
+    margin-bottom: 8px;
+  }
+}

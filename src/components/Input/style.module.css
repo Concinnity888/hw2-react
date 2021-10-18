@@ -1,0 +1,80 @@
+.Input {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.Input__labels {
+  position: relative;
+  margin-bottom: 6px;
+}
+
+.Input__label {
+  margin: 0;
+  padding: 0;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: 0.06px;
+  color: #000000;
+}
+
+.Input__required {
+  margin-left: 2px;
+  color: #FF3333;
+}
+
+.Input__fieldWrap {
+  position: relative;
+  width: 100%;
+}
+
+.Input__field {
+  display: inline-flex;
+  width: 100%;
+  height: 36px;
+  margin: 0;
+  padding: 0 12px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 36px;
+  vertical-align: middle;
+  color: #000000;
+  border: 2px solid #D9D9D9;
+  box-sizing: border-box;
+  border-radius: 4px;
+  outline: none;
+  transition: all 0.35s ease;
+}
+
+.Input__field::placeholder {
+  color: rgba(0, 0, 0, 0.2);
+}
+
+.Input__field_invalid {
+  border: 2px solid #FF3333;
+}
+
+.Input__btnReset {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 36px;
+  height: 36px;
+  background-color: transparent;
+  background-image: url(../../asserts/icon-close.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 16px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.35s ease;
+}
+
+.Input__btnReset:hover {
+  opacity: 0.6;
+}

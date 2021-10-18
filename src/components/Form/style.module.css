@@ -1,0 +1,22 @@
+.Form {
+  display: flex;
+  flex-direction: column;
+  width: 474px;
+}
+
+.Form__btns {
+  margin-top: 24px;
+}
+
+@media (max-width: 1023px) {
+  .Form {
+    width: 100%;
+  }
+
+  .Form__btns {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 22px;
+  }
+}

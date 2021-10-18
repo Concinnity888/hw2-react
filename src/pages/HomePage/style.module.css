@@ -1,0 +1,24 @@
+.HomeContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  max-width: 190px;
+  min-height: 248px;
+  margin: auto;
+  background-image: url(../../asserts/bh-home.svg);
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+.HomeContent__text {
+  margin: 0;
+  margin-bottom: 24px;
+  padding: 0;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 125%;
+  text-align: center;
+  color: #000000;
+}
