@@ -4,12 +4,15 @@ import style from './style.module.css';
 import logo from '../../asserts/logo.svg';
 import iconSetting from '../../asserts/icon-setting.svg';
 import iconBuild from '../../asserts/icon-play.svg';
+import { useSelector } from 'react-redux';
 
-const Header = ({ isSettings, className, settings, onClickBtnOpenPopup }) => {
+const Header = ({ isSettings, className, onClickBtnOpenPopup }) => {
   const location = useLocation();
   const handleClick = (evt) => {
     return onClickBtnOpenPopup(evt);
   };
+
+  const settings = useSelector((state) => state.settings);
 
   return (
     <header className={`${ style.Header } ${ className }`}>

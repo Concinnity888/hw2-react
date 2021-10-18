@@ -4,8 +4,12 @@ import Input from '../../components/Input';
 import InputNumber from '../../components/InputNumber';
 import Button from '../../components/Button';
 import style from './style.module.css';
+import { useSelector, useDispatch } from 'react-redux';
+import { updateSetting } from '../../redux/settingSlice';
 
-const Form = ({ settings, saveSettings}) => {
+const Form = () => {
+  const dispatch = useDispatch();
+  const settings = useSelector((state) => state.settings);
   const history = useHistory();
   const [result, setResult] = useState(settings);
   const [errors, setErrors] = useState({
@@ -42,7 +46,7 @@ const Form = ({ settings, saveSettings}) => {
     const { repository, command, time } = result;
 
     if (!!repository && !!command && !!time) {
-      saveSettings({ ...result });
+      dispatch(updateSetting({ ...result }));
       history.push('/');
     } else {
       setErrors(() => ({

@@ -9,6 +9,7 @@ import HomePage from './pages/HomePage';
 import HistoryPage from './pages/HistoryPage';
 import SettingsPage from './pages/SettingsPage';
 import { commits } from './data/commits';
+import { useSelector } from 'react-redux';
 
 const links = [
   {
@@ -30,15 +31,9 @@ const links = [
 const copyright = '© 2020 Your Name';
 
 function App() {
-  const initialSettings = {
-    repository: '',
-    command: '',
-    branch: '',
-    time: 0
-  };
   const [isOpen, setIsOpen] = useState(false);
-  const [settings, setSettings] = useState(initialSettings);
 
+  const settings = useSelector((state) => state.settings);
   const checkSettings = (settings) => {
     const { repository, command, time } = settings;
     return !!repository && !!command && !!time;
@@ -52,14 +47,10 @@ function App() {
     setIsOpen(false);
   };
 
-  const handleUpdate = (evt) => {
-    setSettings({ ...evt });
-  };
-
   return (
     <Router>
       <div className="App">
-        <Header className="App__header" isSettings={ checkSettings(settings) } onClickBtnOpenPopup={ handleOpenPopup } settings={ settings } />
+        <Header className="App__header" isSettings={ checkSettings(settings) } onClickBtnOpenPopup={ handleOpenPopup } />
 
         <Layout>
           <Switch>
@@ -72,7 +63,7 @@ function App() {
             />
             <Route
               path="/settings"
-              render={ () => <SettingsPage settings={ settings } onUpdateSettings={ handleUpdate } />}
+              render={ () => <SettingsPage />}
             />
             <Route
               path="/history"
